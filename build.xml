@@ -1,0 +1,69 @@
+<project name="StarShipSim" default="build">
+
+	<target name="clean">
+		<delete dir="docs"/>
+		<delete dir="testResults"/>
+	</target>
+	
+	<target name="cleanpyc">
+		<delete>
+			<fileset dir="." includes="*.pyc"/>
+		</delete>
+	</target>
+
+	<target name="init">
+		<mkdir dir="docs"/>
+		<mkdir dir="testResults"/>
+	</target>
+
+	<target name="build" depends="test, doc">
+	</target>
+
+	<target name="doc" depends="init">
+		<exec executable="pydoc">
+			<arg value="-w"/>
+			<arg value="./"/>
+		</exec>
+		<move todir="docs">
+			<fileset dir=".">
+				<include name="*.html"/>
+			</fileset>
+		</move>
+	</target>
+
+	<target name="test" depends="init">
+		<exec executable="python">
+			<arg value="StarShipTestsuite.py" />
+		</exec>
+		<move todir="testResults">
+			<fileset dir=".">
+				<include name="TEST*.xml"/>
+			</fileset>
+		</move>
+	</target>
+	
+	<target name="package" depends="init">
+		<zip	destfile="StarShipSim.zip">
+			<fileset dir=".">
+				<include name="*.py"/>
+				<include name="*.xrc"/>
+				<exclude name="Test*"/>
+			</fileset>
+			<zipfileset dir="docs" includes="*.html" prefix="docs"/>
+		</zip>
+<!--
+		<tar destfile="StarShipSim.tgz" compression="gzip">
+			<tarfileset dir=".">
+				<include name="*.py"/>
+				<include name="*.xrc"/>
+				<exclude name="Test*"/>
+			</tarfileset>
+			<tarfileset dir="./docs" prefix="docs">
+				<include name="*.html"/>
+			</tarfileset>
+		</tar>
+-->
+	</target>
+
+</project>
+	

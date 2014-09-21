@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource>
+  <object class="wxFrame" name="SciencesFrame">
+	<object class="wxPanel" name="SciencesPanel">
+	  <pos>1,1</pos>
+	  <title>Sciences</title>
+	  <object class="wxBoxSizer">
+		<orient>wxVERTICAL</orient>
+		<object class="sizeritem">
+		  <object class="wxStaticBoxSizer">
+			<label>EnergySupply</label>
+			<orient>wxVERTICAL</orient>
+			<border>1</border>
+			<size>350,45</size>
+			<object class="sizeritem">
+			  <object class="wxTextCtrl" name="EngergySupplyAmount">
+				<pos>1,1</pos>
+				<size>325,25</size>
+			  </object>
+			</object>
+			<object class="sizeritem">
+			  <object class="wxGauge" name="EnergySupplyGauge">
+				<size>325,25</size>
+				<style>wxGA_HORIZONTAL|wxGA_PROGRESSBAR|wxGA_SMOOTH</style>
+			  </object>
+			</object>
+		  </object>
+		</object>
+		<object class="sizeritem">
+		  <object class="wxStaticBoxSizer">
+			<label>Life Support</label>
+			<orient>wxVERTICAL</orient>
+			<border>1</border>
+			<object class="sizeritem">
+			  <object class="wxStaticBoxSizer">
+				<label>Supply</label>
+				<orient>wxHORIZONTAL</orient>
+				<object class="sizeritem">
+				  <object class="wxStaticBoxSizer">
+					<label>Oxygen</label>
+					<object class="sizeritem">
+					  <object class="wxGauge" name="OxygenSupplyGauge">
+						<size>10,50</size>
+						<style>wxGA_VERTICAL|wxGA_PROGRESSBAR|wxGA_SMOOTH</style>
+					  </object>
+					</object>
+				  </object>
+				</object>
+				<object class="sizeritem">
+				  <object class="wxStaticBoxSizer">
+					<label>Water</label>
+					<object class="sizeritem">
+					  <object class="wxGauge" name="WaterSupplyGauge">
+						<size>10,50</size>
+						<style>wxGA_VERTICAL|wxGA_PROGRESSBAR|wxGA_SMOOTH</style>
+					  </object>
+					</object>
+				  </object>
+				</object>
+				<object class="sizeritem">
+				  <object class="wxStaticBoxSizer">
+					<label>Food</label>
+					<object class="sizeritem">
+					  <object class="wxGauge" name="FoodSupplyGauge">
+						<size>10,50</size>
+						<style>wxGA_VERTICAL|wxGA_PROGRESSBAR|wxGA_SMOOTH</style>
+					  </object>
+					</object>
+				  </object>
+				</object>
+			  </object>
+			</object>
+			<object class="sizeritem">
+			  <object class="wxStaticBoxSizer">
+				<label>Recycle</label>
+				<orient>wxHORIZONTAL</orient>
+				<object class="sizeritem">
+				  <object class="wxStaticBoxSizer">
+					<label>Oxygen</label>
+					<object class="sizeritem">
+					  <object class="wxGauge" name="OxygenRecycleGauge">
+						<size>10,50</size>
+						<style>wxGA_VERTICAL|wxGA_PROGRESSBAR|wxGA_SMOOTH</style>
+					  </object>
+					</object>
+				  </object>
+				</object>
+				<object class="sizeritem">
+				  <object class="wxStaticBoxSizer">
+					<label>Water</label>
+					<object class="sizeritem">
+					  <object class="wxGauge" name="WaterRecycleGauge">
+						<size>10,50</size>
+						<style>wxGA_VERTICAL|wxGA_PROGRESSBAR|wxGA_SMOOTH</style>
+					  </object>
+					</object>
+				  </object>
+				</object>
+				<object class="sizeritem">
+				  <object class="wxStaticBoxSizer">
+					<label>Food</label>
+					<object class="sizeritem">
+					  <object class="wxGauge" name="FoodRecycleGauge">
+						<size>10,50</size>
+						<style>wxGA_VERTICAL|wxGA_PROGRESSBAR|wxGA_SMOOTH</style>
+					  </object>
+					</object>
+				  </object>
+				</object>
+			  </object>
+			</object>
+		  </object>
+		</object>
+	  </object>
+	</object>
+  </object>
+</resource>
